@@ -39,7 +39,7 @@ a {
 .hero {
   height: 100vh;
   width: 100%;
-  background: #5d5b6a; }
+  background: #dcdbdf; }
 
 .site-navbar {
   margin-bottom: 0px;
@@ -54,7 +54,7 @@ a {
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active {
-      color: #007bff;
+      color: #f1f3f5;
       display: inline-block;
       padding: 20px 20px; }
     .site-navbar .site-navigation .site-menu a {
@@ -69,7 +69,7 @@ a {
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #007bff; }
+          color: #0681fc; }
       .site-navbar .site-navigation .site-menu > li.social > a {
         padding-left: 5px;
         padding-right: 5px; }
@@ -128,7 +128,7 @@ a {
           transition: 0s all;
           color: #000; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown .active {
-          color: #007bff !important; }
+          color: #f8f9fa !important; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
           padding: 0;
@@ -138,7 +138,7 @@ a {
             padding: 9px 20px;
             display: block; }
             .site-navbar .site-navigation .site-menu .has-children .dropdown > li > a:hover {
-              background: #eff1f3;
+              background: #01fa3f;
               color: #000; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
             content: "\e315";
@@ -147,7 +147,7 @@ a {
             left: 100%;
             top: 0; }
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
-        color: #007bff; }
+        color: #ffffff; }
       .site-navbar .site-navigation .site-menu .has-children:hover, .site-navbar .site-navigation .site-menu .has-children:focus, .site-navbar .site-navigation .site-menu .has-children:active {
         cursor: pointer; }
         .site-navbar .site-navigation .site-menu .has-children:hover > .dropdown, .site-navbar .site-navigation .site-menu .has-children:focus > .dropdown, .site-navbar .site-navigation .site-menu .has-children:active > .dropdown {
