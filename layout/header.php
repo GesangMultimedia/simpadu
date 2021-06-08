@@ -68,10 +68,9 @@
                 <li class="has-children">
                   <a href="#" class="nav-link">Data</a>
                   <ul class="dropdown">
-                    <li><a href="komoditas.php" class="nav-link">Komoditas</a></li>
-                    <li><a href="tahun.php" class="nav-link">Tahun</a></li>
-                    <li><a href="indikator.php" class="nav-link">Indikator</a></li>
-                    <li><a href="lokasi.php" class="nav-link">Lokasi</a></li>
+                    <li><a href="komoditas.php" class="nav-link">Sektor Pertanian</a></li>
+                    <li><a href="tahun.php" class="nav-link">Sektor Perikanan</a></li>
+                    <li><a href="indikator.php" class="nav-link">Luas Lahan</a></li>
                   </ul>
                 </li>             
                 <li><a href="aplikasi/index.php" class="nav-link">Data Master</a></li>

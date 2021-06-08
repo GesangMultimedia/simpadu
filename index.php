@@ -1,47 +1,34 @@
 <?php
   include "layout/header.php";
 ?>
-<body><br/><br/><br/><br/>
-  <h2 class="text-center">Selamat Datang Di Aplikasi SIMPADU</h2>
+<body class="hero"><br/><br/><br/><br/>
+  <h2 class="text-center text-white">Selamat Datang Di Aplikasi SIMPADU</h2><br/><br/>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
       <div class="card" style="width: 100%; margin-right: 15">
         <div class="card-body text-center">
-          <h5 class="card-tittle text-center font-weight-bold">Komoditas</h5>
-          <img src="assets/images/komoditas.jpg" alt="komoditas" class="img-fluid">
-          <p class="card-text text-dark text-center">Untuk mencari berdasarkan Komoditas</p>
+          <h5 class="card-tittle text-center font-weight-bold">Sektor Pertanian</h5>
+          <img src="assets/images/pertanian.jpg" alt="komoditas" style="width: 380px;"><br><br><br>
           <a href="komoditas.php" class="card-link btn-success btn-lg ">Klik Disini</a>
         </div>     
       </div>
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <div class="card" style="width: 100%; height:fit-content">
           <div class="card-body text-center">
-            <h5 class="card-tittle text-center font-weight-bold">Tahun</h5>
-            <img src="assets/images/kalender.jpg" alt="komoditas" class="img-fluid">
-            <p class="card-text text-dark text-center">Untuk mencari berdasarkan Tahun</p>
+            <h5 class="card-tittle text-center font-weight-bold">Sektor Perikanan</h5>
+            <img src="assets/images/perikanan.jpg" alt="komoditas" style="width: 380px;"><br><br><br>
             <a href="tahun.php" class="card-link btn-success btn-lg ">Klik Disini</a>
           </div>     
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <div class="card" style="width: 100%; height:fit-content">
           <div class="card-body text-center">
-            <h5 class="card-tittle text-center font-weight-bold">Indikator</h5>
-            <img src="assets/images/statistik.jpg" alt="komoditas" class="img-fluid">
-            <p class="card-text text-dark text-center">Untuk mencari berdasarkan Indikator</p>
+            <h5 class="card-tittle text-center font-weight-bold">Luas Lahan</h5>
+            <img src="assets/images/luaslahan.jpg" alt="komoditas" style="width: 350px;"><br/><br/><br/>
             <a href="komoditas.php" class="card-link btn-success btn-lg ">Klik Disini</a>
-          </div>     
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="card" style="width: 100%; height:fit-content">
-          <div class="card-body text-center">
-            <h5 class="card-tittle text-center font-weight-bold">Lokasi</h5>
-            <img src="assets/images/peta-cilacap.jpg" alt="komoditas" class="img-fluid">
-            <p class="card-text text-dark text-center">Untuk mencari berdasarkan Lokasi</p>
-            <a href="lokasi.php" class="card-link btn-success btn-lg ">Klik Disini</a>
           </div>     
         </div>
       </div>

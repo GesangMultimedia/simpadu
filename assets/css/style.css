@@ -10,7 +10,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(253, 253, 253, 0.5);
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -22,7 +22,7 @@ body {
     visibility: visible; }
 
 p {
-  color: #b3b3b3;
+  color: #ffffff;
   font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6,
@@ -37,9 +37,9 @@ a {
     text-decoration: none !important; }
 
 .hero {
-  height: 100vh;
+  height: 500px;
   width: 100%;
-  background: #dcdbdf; }
+  background: #ffffff; }
 
 .site-navbar {
   margin-bottom: 0px;
