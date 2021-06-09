@@ -117,7 +117,7 @@
             <div class="card-body">                          
                 <form method="POST" action="data/simpan_adipala.php" enctype="multipart/form-data" id="usrform">
                     <section class="base">
-                        <h2 class="title text-center text-uppercase">form pencarian berdasarkan tahun</h2>
+                        <h2 class="title text-center text-uppercase">form pencarian berdasarkan indikator</h2>
                         <hr class="style2">
                         <!-- menampung nilai id produk yang akan di edit -->
                         <div class="row">

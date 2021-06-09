@@ -3,7 +3,7 @@
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "statistik_pertanian";
+$db_name = "simpadu";
 
 try {    
     //create PDO connection 
