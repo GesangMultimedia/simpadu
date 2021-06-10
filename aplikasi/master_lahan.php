@@ -150,12 +150,12 @@
                                     <div class="form-group row">
                                         <label for="id" class="col-sm-4 col-form-label text-dark">Satuan Luas</label>
                                         <div class="col-sm-8">
-                                        <select name="satuan_luas" class="custom-select" required="">
-                                            <option disabled selected>Pilih Satuan Luas ...</option>
-                                            <option>Hektar</option>
-                                            <option>Acre</option>
-                                            <option>Ubin</option>
-                                        </select>
+                                            <select name="satuan_luas" class="custom-select" required="">
+                                                <option disabled selected>Pilih Satuan Luas ...</option>
+                                                <option>Hektar</option>
+                                                <option>Acre</option>
+                                                <option>Ubin</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
