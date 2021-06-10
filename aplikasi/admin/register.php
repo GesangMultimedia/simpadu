@@ -1,4 +1,6 @@
 <?php
+include "auth.php";
+include "sidebar.php";
 
 require_once("config.php");
 
@@ -36,21 +38,37 @@ if(isset($_POST['register'])){
 ?>
 
 <body>
-    <div class="container-fluid">
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <form action="" method="POST" class="box">
-                        <h1>Register User</h1>
-                        <p class="text-muted">Isikan Detail dibawah ini</p>
-                        <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
-                        <input class="form-control" type="text" name="username" placeholder="Username" />
-                        <input class="form-control" type="text" name="email" placeholder="Alamat Email" />
-                        <input class="form-control" type="password" name="password" placeholder="Password" />
-                        <input type="submit" name="register" value="Daftar" />
-                    </form>
+    <main class="page-content pt-2">
+        <div id="overlay" class="overlay"></div>
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="form-group col-md-12 text-center">
+                <img src="../img/logosimpadu.png" alt="logo" style="width: 150px; height: 150px">
+
+                </div>
+            </div>
+            <hr class="style2">
+            <div class="card card-4">
+                <div class="card-body">                  
+                    <div class="row">
+                        <div class="col-md-6">
+                            <section class="base">
+                                <form action="" method="POST" class="box">
+                                    <h1>Register User Baru</h1>
+                                    <p class="text-muted">Isikan Detail dibawah ini</p>
+                                    <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
+                                    <input class="form-control" type="text" name="username" placeholder="Username" />
+                                    <input class="form-control" type="text" name="email" placeholder="Alamat Email" />
+                                    <input class="form-control" type="password" name="password" placeholder="Password" />
+                                    <button class="btn btn-success" type="submit">Simpan</button>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+<?php
+    include "footer.php";
+?>

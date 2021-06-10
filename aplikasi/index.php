@@ -116,7 +116,6 @@
                 <div class="row">
                     <div class="form-group col-md-12 text-center">
                         <img src="img/logosimpadu.png" alt="logo" style="width: 150px; height: 150px">
-
                     </div>
                 </div>
                 <hr class="style2">       

@@ -1,14 +1,13 @@
 <?php
-    include "admin/auth.php";
-    include "template/sidebar.php";
-    include "data/config.php";
-
+    include "auth.php";
+    include "sidebar.php";
+    include "../data/config.php";
     if (isset($_GET['id'])) {
         // ambil nilai id dari url dan disimpan dalam variabel $id
         $id = ($_GET["id"]);
     
         // menampilkan data dari database yang mempunyai id=$id
-        $query = "SELECT * FROM `tbl_master_komoditas` WHERE id='$id'";
+        $query = "SELECT * FROM users WHERE id ='$id'";
         $result = mysqli_query($koneksi, $query);
         // jika data gagal diambil maka akan tampil error berikut
         if(!$result){
@@ -133,95 +132,71 @@
       border-top: 4px double #8c8b8b;
     }
     </style>
-    
 <body>
     <main class="page-content pt-2">
         <div id="overlay" class="overlay"></div>
         <div class="container-fluid p-5">
             <div class="row">
                 <div class="form-group col-md-12 text-center">
-                    <img src="img/logosimpadu.png" alt="logo" style="width: 150px; height: 150px">
+                    <img src="../img/logosimpadu.png" alt="logo" style="width: 150px; height: 150px">
+
                 </div>
             </div>
             <hr class="style2">
             <div class="card card-4">
                 <div class="card-body">                          
-                    <form method="POST" action="data/update_master_komoditas.php" enctype="multipart/form-data" id="usrform">
-                    
+                    <form method="POST" action="update_user.php" enctype="multipart/form-data" id="usrform">
                         <section class="base">
-                            <h2 class="title text-center text-uppercase">edit master komoditas <?php echo $data['nama_komoditas'];?></h2>
+                            <h2 class="title text-center text-uppercase">edit user <?php echo $data['name'];?></h2>
                             <hr class="style2">
                             <div class="row">
                                 <div class="col-6">                           
                                     <div class="form-group row">
                                         <label for="id" class="col-sm-4 col-form-label text-dark">No ID</label>
                                         <div class="col-sm-8">
-                                            <input type="number" value="<?php echo $data['id']+1; ?>" readonly/>
+                                            <input type="number" value="<?php echo $data['id']; ?>" readonly/>
                                             <input type="hidden" name="id" value="<?php echo $data['id']; ?>" readonly/>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="id" class="col-sm-4 col-form-label text-dark">Sektor</label>
+                                        <label for="id" class="col-sm-4 col-form-label text-dark">User Name</label>
                                         <div class="col-sm-8">
-                                        <select name="sektor" id="cat" class="custom-select" required="">
-                                            <option val="PERTANIAN">PERTANIAN</option>
-                                            <option val="PERIKANAN">PERIKANAN</option>
-                                        </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group row">
-                                        <label for="id" class="col-sm-4 col-form-label text-dark">Sub Sektor</label>
-                                        <div class="col-sm-8">
-                                        <select name="sub_sektor" id="item" class="custom-select" required="">                                            
-                                        </select>
+                                            <input type="text" name="user_name" value="<?php echo $data['username']; ?>" readonly/>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="id" class="col-sm-4 col-form-label text-dark">Nama Komoditas</label>
+                                        <label for="id" class="col-sm-4 col-form-label text-dark">Email</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="text-uppercase" name="nama_komoditas" value="<?php echo $data['nama_komoditas']; ?>" required=""/>
+                                            <input type="text" name="email" value="<?php echo $data['email']; ?>" required=""/>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                     <div class="form-group row">
-                                        <button class="btn btn-danger" type="submit">Simpan</button>
+                                        <label for="id" class="col-sm-4 col-form-label text-dark">Level User</label>
+                                        <div class="col-sm-8">
+                                            <select name="user_level" class="custom-select" required="">
+                                                <option disabled selected>Pilih User Level...</option>
+                                                <option>Administrator</option>
+                                                <option>Super User</option>
+                                                <option>User</option>
+                                                <option>Tamu</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-8">
+                                            <button class="btn btn-danger" type="submit">Simpan</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         <hr class="style2">                        
-                        </section>
                     </form>
                 </div>
             </div>       
         </div>
     </main>
 </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
-    <script>
-        PERTANIAN=new Array("TANAMAN PANGAN","TANAMAN SAYURAN","TANAMAN BIOFARMAKA","TANAMAN BUAH", "TANAMAN PERKEBUNAN", "PETERNAKAN");
-        PERIKANAN=new Array('USAHA PEMBESARAN','PRODUKSI BUDIDAYA PEMBESARAN KOLAM','PRODUKSI BUDIDAYA PEMBESARAN KARAMBA', 'PRODUKSI BUDIDAYA PEMBESARAN MINAPADI', 'PRODUKSI BUDIDAYA PEMBESARAN TAMBAK', 'USAHA PEMBENIHAN', 'USAHA IKAN HIAS');
 
-        populateSelect();
-
-        $(function() {
-
-            $('#cat').change(function(){
-                populateSelect();
-            });
-            
-        });
-
-
-        function populateSelect(){
-            cat=$('#cat').val();
-            $('#item').html('');
-            
-            eval(cat).forEach(function(t) { 
-                    $('#item').append('<option>'+t+'</option>');
-                });
-            }
-    </script>
 <?php
     include "template/footer.php";
 ?>

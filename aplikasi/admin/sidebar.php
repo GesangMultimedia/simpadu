@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"> -->
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/sidebar-themes.css">
-    <link rel="shortcut icon" type="image/png" href="img/icon/android-icon-36x36.png" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sidebar-themes.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../img/icon/android-icon-36x36.png" />
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                        <img class="img-responsive img-rounded" src="../img/user.jpg" alt="User picture">
                     </div>
                     <div class="user-info">
                         <span class="user-name"><?php echo $_SESSION["user"]["name"] ?>
@@ -67,7 +68,7 @@
                 <div class=" sidebar-item sidebar-menu">
                     <ul>                        
                         <li>
-                            <a href="index.php">
+                            <a href="../index.php">
                                 <i class="fa fa-home"></i>
                                 <span class="menu-text">Beranda</span>
                             </a>
@@ -83,12 +84,12 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <a href="master_lahan.php">
+                                    <a href="../master_lahan.php">
                                         <i class="fas fa-tractor"></i> Jenis Lahan
                                     </a>
                                 </ul>
                                 <ul>
-                                    <a href="master_komoditas.php"><i class="fas fa-atom"></i> Komoditas</a>
+                                    <a href="../master_komoditas.php"><i class="fas fa-atom"></i> Komoditas</a>
                                 </ul>
                                 <ul>
                                     
@@ -103,10 +104,10 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <a href="./admin/register.php"><i class="fas fa-user-plus"></i> Registrasi Pengguna Baru</a>
+                                    <a href="register.php"><i class="fas fa-user-plus"></i> Registrasi Pengguna Baru</a>
                                 </ul>
                                 <ul>
-                                    <a href="./admin/hapusakun.php"><i class="fas fa-user-minus"></i> Hapus Pengguna</a>
+                                    <a href="hapusakun.php"><i class="fas fa-user-minus"></i> Hapus Pengguna</a>
                                 </ul>
                                 <ul>
                                     <a href="#"><i class="fas fa-user-shield"></i> Pengaturan Pengguna</a>
