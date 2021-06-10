@@ -18,7 +18,7 @@
         <div class="card" style="width: 100%; height:fit-content">
           <div class="card-body text-center">
             <h5 class="card-tittle text-center font-weight-bold">Sektor Perikanan</h5>
-            <img src="assets/images/tpicilacap.jpg" alt="komoditas" style="width: 380px; height: 240px;"><br><br><br>
+            <img src="assets/images/tpicilacap1.jpg" alt="komoditas" style="width: 380px; height: 250px;"><br><br><br>
             <a href="tahun.php" class="card-link btn-success btn-lg ">Klik Disini</a>
           </div>     
         </div>
@@ -27,7 +27,7 @@
         <div class="card" style="width: 100%; height:fit-content">
           <div class="card-body text-center">
             <h5 class="card-tittle text-center font-weight-bold">Luas Lahan</h5>
-            <img src="assets/images/luaslahan.jpg" alt="komoditas" style="width: 350px;"><br/><br/><br/>
+            <img src="assets/images/luaslahan.jpg" alt="komoditas" style="width: 380px;"><br/><br/><br/>
             <a href="komoditas.php" class="card-link btn-success btn-lg ">Klik Disini</a>
           </div>     
         </div>

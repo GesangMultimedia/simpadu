@@ -115,7 +115,7 @@
             <div class="container-fluid p-5">
                 <div class="row">
                     <div class="form-group col-md-12 text-center">
-                        <img src="img/logov2land.png" alt="logo" style="width: 300px;">
+                        <img src="img/logosimpadu.png" alt="logo" style="width: 150px; height: 150px">
 
                     </div>
                 </div>

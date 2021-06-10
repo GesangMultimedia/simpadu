@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
@@ -31,7 +31,7 @@
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand text-center">
-                    <a href="#">SIMPADU ADMIN</a>
+                    <a href="http://192.168.1.24:8080/simpadu">SIMPADU ADMIN</a>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
@@ -67,7 +67,7 @@
                 <div class=" sidebar-item sidebar-menu">
                     <ul>                        
                         <li>
-                            <a href="Index.php">
+                            <a href="index.php">
                                 <i class="fa fa-home"></i>
                                 <span class="menu-text">Beranda</span>
                             </a>
@@ -83,12 +83,12 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <a href="master-lahan.php">
+                                    <a href="master_lahan.php">
                                         <i class="fas fa-tractor"></i> Jenis Lahan
                                     </a>
                                 </ul>
                                 <ul>
-                                    <a href="#"><i class="fas fa-atom"></i> Komoditas</a>
+                                    <a href="master_komoditas.php"><i class="fas fa-atom"></i> Komoditas</a>
                                 </ul>
                                 <ul>
                                     
