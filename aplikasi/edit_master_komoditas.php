@@ -156,7 +156,7 @@
                                     <div class="form-group row">
                                         <label for="id" class="col-sm-4 col-form-label text-dark">No ID</label>
                                         <div class="col-sm-8">
-                                            <input type="number" value="<?php echo $data['id']+1; ?>" readonly/>
+                                            <input type="number" value="<?php echo $data['id']; ?>" readonly/>
                                             <input type="hidden" name="id" value="<?php echo $data['id']; ?>" readonly/>
                                         </div>
                                     </div>
@@ -197,7 +197,8 @@
         </div>
     </main>
 </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
     <script>
         PERTANIAN=new Array("TANAMAN PANGAN","TANAMAN SAYURAN","TANAMAN BIOFARMAKA","TANAMAN BUAH", "TANAMAN PERKEBUNAN", "PETERNAKAN");
         PERIKANAN=new Array('USAHA PEMBESARAN','PRODUKSI BUDIDAYA PEMBESARAN KOLAM','PRODUKSI BUDIDAYA PEMBESARAN KARAMBA', 'PRODUKSI BUDIDAYA PEMBESARAN MINAPADI', 'PRODUKSI BUDIDAYA PEMBESARAN TAMBAK', 'USAHA PEMBENIHAN', 'USAHA IKAN HIAS');

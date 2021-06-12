@@ -4,7 +4,6 @@
     include "data/config.php";
 ?>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 <style type="text/css">
       * {
         font-family: "Trebuchet MS";
@@ -188,29 +187,19 @@
                                     </tr>
                                 </thead>  
                                 <tbody>
-                                <?php 
-                                    $batas = 10;
-                                    $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-                                    $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-                    
-                                    $previous = $halaman - 1;
-                                    $next = $halaman + 1;
-                                    
-                                    $data = mysqli_query($koneksi,"select * from tbl_master_komoditas");
-                                    $jumlah_data = mysqli_num_rows($data);
-                                    $total_halaman = ceil($jumlah_data / $batas);
-                    
-                                    $data_pegawai = mysqli_query($koneksi,"select * from tbl_master_komoditas limit $halaman_awal, $batas");
-                                    $nomor = $halaman_awal+1;
-                                    while($d = mysqli_fetch_array($data_pegawai)){
-					            ?>
+                                    <?php 
+                                        $query = mysqli_query($koneksi,"SELECT * FROM tbl_master_komoditas ORDER BY id ASC");
+                                        $no = 1;
+                                        while ($data = mysqli_fetch_assoc($query)) 
+                                        {
+                                    ?>
                                     <tr>
-                                        <td class="text-center"><?php echo $d['id']; ?></td>
-                                        <td class="text-center text-uppercase"><?php echo $d['nama_komoditas']; ?></td>
-                                        <td class="text-center text-uppercase"><?php echo $d['sektor']; ?></td>
-                                        <td class="text-center text-uppercase"><?php echo $d['sub_sektor']; ?></td>
-                                        <td class="text-center text-uppercase"><?php echo $d['satuan']; ?></td>
-                                        <td><a href="edit_master_komoditas.php?id=<?php echo $d['id'];?>"><i class="fas fa-edit fa-2x"></i></a></td>
+                                        <td class="text-center"><?php echo $data['id']; ?></td>
+                                        <td class="text-center text-uppercase"><?php echo $data['nama_komoditas']; ?></td>
+                                        <td class="text-center text-uppercase"><?php echo $data['sektor']; ?></td>
+                                        <td class="text-center text-uppercase"><?php echo $data['sub_sektor']; ?></td>
+                                        <td class="text-center text-uppercase"><?php echo $data['satuan']; ?></td>
+                                        <td><a href="edit_master_komoditas.php?id=<?php echo $data['id'];?>"><i class="fas fa-edit fa-2x"></i></a></td>
                                     </tr>
                                     <?php               
                                     } 
@@ -222,23 +211,6 @@
                                 } );
                                 </script>
                             </table>
-                            <nav>
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item">
-                                        <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Sebelumnya</a>
-                                    </li>
-                                    <?php 
-                                    for($x=1;$x<=$total_halaman;$x++){
-                                        ?> 
-                                        <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                                        <?php
-                                    }
-                                    ?>				
-                                    <li class="page-item">
-                                        <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Sesudahnya</a>
-                                    </li>
-                                </ul>
-                            </nav>
                         </section>
                     </form>
                 </div>
