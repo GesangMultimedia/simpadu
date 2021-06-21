@@ -117,7 +117,7 @@
             <div class="card-body">                          
                 <form method="POST" action="data/simpan_adipala.php" enctype="multipart/form-data" id="usrform">
                     <section class="base">
-                        <h2 class="title text-center text-uppercase">sektor pertanian</h2>
+                        <h2 class="title text-center text-uppercase">sektor perikanan</h2>
                         <hr class="style2">
                         <!-- menampung nilai id produk yang akan di edit -->
                         <div class="row">
@@ -128,7 +128,7 @@
                                 <select name="namadesa" class="custom-select" required="">
                                 <option disabled selected>Pilih Sub Sektor...</option>
                                 <?php
-                                  $query = "SELECT DISTINCT(sub_sektor) FROM tbl_master_subsektor WHERE sektor = 'PERTANIAN' ORDER BY sub_sektor ASC";
+                                  $query = "SELECT DISTINCT(sub_sektor) FROM tbl_master_subsektor WHERE sektor = 'PERIKANAN' ORDER BY sub_sektor ASC";
                                   $result = mysqli_query($koneksi, $query);                                
                                       while(list($category) = mysqli_fetch_row($result)){
                                       $option = '<option value="'.$category.'">'.$category.'</option>';

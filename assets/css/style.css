@@ -12,7 +12,7 @@ body:before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -27,7 +27,7 @@ body.offcanvas-menu:before {
 }
 
 p {
-    color: #ffffff;
+    color: #b3b3b3;
     font-weight: 300;
 }
 
@@ -58,9 +58,9 @@ a:hover {
 }
 
 .hero {
-    height: 500px;
+    height: 750px;
     width: 100%;
-    background: #ffffff;
+    background: #5d5b6a;
 }
 
 .site-navbar {
@@ -82,7 +82,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu .active {
-    color: #ffffff;
+    color: #007bff;
     display: inline-block;
     padding: 20px 20px;
 }
@@ -105,7 +105,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu>li>a:hover {
-    color: #e3fc06;
+    color: #007bff;
 }
 
 .site-navbar .site-navigation .site-menu>li.social>a {
@@ -140,13 +140,13 @@ a:hover {
     top: 100%;
     position: absolute;
     text-align: left;
-    border-top: 2px solid #0a0a0a;
+    border-top: 2px solid #007bff;
     -webkit-box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
     padding: 0px 0;
     margin-top: 20px;
     margin-left: 0px;
-    background: rgb(4, 250, 57);
+    background: #fff;
     -webkit-transition: 0.2s 0s;
     -o-transition: 0.2s 0s;
     transition: 0.2s 0s;
@@ -184,7 +184,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown .active {
-    color: #f8f9fa !important;
+    color: #007bff !important;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li {
@@ -200,7 +200,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown>li>a:hover {
-    background: #01fa3f;
+    background: #eff1f3;
     color: #000;
 }
 
@@ -218,7 +218,7 @@ a:hover {
 .site-navbar .site-navigation .site-menu .has-children:hover>a,
 .site-navbar .site-navigation .site-menu .has-children:focus>a,
 .site-navbar .site-navigation .site-menu .has-children:active>a {
-    color: #ffffff;
+    color: #007bff;
 }
 
 .site-navbar .site-navigation .site-menu .has-children:hover,
@@ -338,7 +338,7 @@ a:hover {
 }
 
 .site-mobile-menu .site-nav-wrap li .active {
-    color: #f6f7f8;
+    color: #007bff;
 }
 
 .site-mobile-menu .site-nav-wrap .social {

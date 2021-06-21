@@ -128,7 +128,7 @@
                     <form method="POST" action="data/simpan_master_komoditas.php" enctype="multipart/form-data" id="usrform">
                     
                         <section class="base">
-                            <h2 class="title text-center text-uppercase">form master komoditas</h2>
+                            <h2 class="title text-center text-uppercase">form master data pertanian</h2>
                             <hr class="style2">
                             <div class="row">
                                 <div class="col-6">                           
@@ -187,12 +187,22 @@
                                     </tr>
                                 </thead>  
                                 <tbody>
-                                    <?php 
-                                        $query = mysqli_query($koneksi,"SELECT * FROM tbl_master_komoditas ORDER BY id ASC");
-                                        $no = 1;
-                                        while ($data = mysqli_fetch_assoc($query)) 
-                                        {
-                                    ?>
+                                <?php 
+                                    $batas = 10;
+                                    $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+                                    $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+                    
+                                    $previous = $halaman - 1;
+                                    $next = $halaman + 1;
+                                    
+                                    $data = mysqli_query($koneksi,"select * from tbl_master_komoditas");
+                                    $jumlah_data = mysqli_num_rows($data);
+                                    $total_halaman = ceil($jumlah_data / $batas);
+                    
+                                    $data_pegawai = mysqli_query($koneksi,"select * from tbl_master_komoditas limit $halaman_awal, $batas");
+                                    $nomor = $halaman_awal+1;
+                                    while($d = mysqli_fetch_array($data_pegawai)){
+					            ?>
                                     <tr>
                                         <td class="text-center"><?php echo $data['id']; ?></td>
                                         <td class="text-center text-uppercase"><?php echo $data['nama_komoditas']; ?></td>
@@ -211,6 +221,23 @@
                                 } );
                                 </script>
                             </table>
+                            <nav>
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Sebelumnya</a>
+                                    </li>
+                                    <?php 
+                                    for($x=1;$x<=$total_halaman;$x++){
+                                        ?> 
+                                        <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                                        <?php
+                                    }
+                                    ?>				
+                                    <li class="page-item">
+                                        <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Sesudahnya</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </section>
                     </form>
                 </div>
