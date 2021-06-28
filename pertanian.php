@@ -109,10 +109,10 @@
       border-top: 4px double #8c8b8b;
     }
     </style>
-<body>
+<body class="hero">
     <div class="container-fluid">
       <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680"><br/><br/>
+        <div class="wrapper wrapper--w680"><br/><br/><br/><br/>
           <div class="card card-4">
             <div class="card-body">                          
                 <form method="POST" action="data/simpan_adipala.php" enctype="multipart/form-data" id="usrform">
@@ -125,61 +125,81 @@
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Sub Sektor</label>
                                 <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
-                                <option disabled selected>Pilih Sub Sektor...</option>
-                                <?php
-                                  $query = "SELECT DISTINCT(sub_sektor) FROM tbl_master_subsektor WHERE sektor = 'PERTANIAN' ORDER BY sub_sektor ASC";
-                                  $result = mysqli_query($koneksi, $query);                                
-                                      while(list($category) = mysqli_fetch_row($result)){
-                                      $option = '<option value="'.$category.'">'.$category.'</option>';
-                                      echo ($option);
-                                      }
-                                ?>
+                                <select name="komoditas2" class="custom-select text-uppercase" required="">
+                                    <option disabled selected>Pilih Indikator</option>
+                                    <?php
+                                    $query = "SELECT DISTINCT(sub_sektor) FROM `tbl_data_pertanian` ORDER BY sub_sektor ASC";
+                                    $result = mysqli_query($koneksi, $query);                                
+                                        while(list($category) = mysqli_fetch_row($result)){
+                                        $option = '<option class="text-uppercase" value="'.$category.'">'.$category.'</option>';
+                                        echo ($option);
+                                        }
+                                    ?>
                                 </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Indikator</label>
                                 <div class="col-sm-8">
-                                    <select name="namadesa" class="custom-select" required="">
-                                        <option disabled selected>Pilih Indikator...</option>
-                                        <option>Luas Panen</option>
-                                        <option>Produksi</option>
-                                        <option>Produktivitas</option>
-                                    </select>
+                                <select name="komoditas2" class="custom-select text-uppercase" required="">
+                                    <option disabled selected>Pilih Indikator</option>
+                                    <?php
+                                    $query = "SELECT DISTINCT(jn_indikator) FROM `tbl_data_pertanian` ORDER BY jn_indikator ASC";
+                                    $result = mysqli_query($koneksi, $query);                                
+                                        while(list($category) = mysqli_fetch_row($result)){
+                                        $option = '<option class="text-uppercase" value="'.$category.'">'.$category.'</option>';
+                                        echo ($option);
+                                        }
+                                    ?>
+                                </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Komoditas 1</label>
                                 <div class="col-sm-8">
-                                    <select name="namadesa" class="custom-select" required="">
-                                        <option disabled selected>Pilih Komoditas...</option>
-                                        <option>Luas Panen</option>
-                                        <option>Produksi</option>
-                                        <option>Produktivitas</option>
-                                    </select>
+                                <select name="komoditas" class="custom-select text-uppercase" required="">
+                                    <option disabled selected>Pilih Komoditas...</option>
+                                    <?php
+                                    $query = "SELECT DISTINCT(nama_komoditas) FROM `tbl_data_pertanian` ORDER BY nama_komoditas ASC";
+                                    $result = mysqli_query($koneksi, $query);                                
+                                        while(list($category) = mysqli_fetch_row($result)){
+                                        $option = '<option class="text-uppercase" value="'.$category.'">'.$category.'</option>';
+                                        echo ($option);
+                                        }
+                                    ?>
+                                </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Komoditas 2</label>
                                 <div class="col-sm-8">
-                                    <select name="namadesa" class="custom-select" required="">
-                                        <option disabled selected>Pilih Komoditas...</option>
-                                        <option>Luas Panen</option>
-                                        <option>Produksi</option>
-                                        <option>Produktivitas</option>
-                                    </select>
+                                <select name="komoditas1" class="custom-select text-uppercase" required="">
+                                    <option disabled selected>Pilih Komoditas...</option>
+                                    <?php
+                                    $query = "SELECT DISTINCT(nama_komoditas) FROM `tbl_data_pertanian` ORDER BY nama_komoditas ASC";
+                                    $result = mysqli_query($koneksi, $query);                                
+                                        while(list($category) = mysqli_fetch_row($result)){
+                                        $option = '<option class="text-uppercase" value="'.$category.'">'.$category.'</option>';
+                                        echo ($option);
+                                        }
+                                    ?>
+                                </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih KOmoditas 3</label>
                                 <div class="col-sm-8">
-                                    <select name="namadesa" class="custom-select" required="">
-                                        <option disabled selected>Pilih Komoditas...</option>
-                                        <option>Luas Panen</option>
-                                        <option>Produksi</option>
-                                        <option>Produktivitas</option>
-                                    </select>
+                                <select name="komoditas2" class="custom-select text-uppercase" required="">
+                                    <option disabled selected>Pilih Komoditas...</option>
+                                    <?php
+                                    $query = "SELECT DISTINCT(nama_komoditas) FROM `tbl_data_pertanian` ORDER BY nama_komoditas ASC";
+                                    $result = mysqli_query($koneksi, $query);                                
+                                        while(list($category) = mysqli_fetch_row($result)){
+                                        $option = '<option class="text-uppercase" value="'.$category.'">'.$category.'</option>';
+                                        echo ($option);
+                                        }
+                                    ?>
+                                </select>
                                 </div>
                             </div>                            
                         </div>
@@ -187,10 +207,10 @@
                             <div class="form-group row">
                               <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Kecamatan 1</label>
                               <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
+                                <select name="namakecamatan" class="custom-select text-uppercase" required="">
                                     <option disabled selected>Pilih Kecamatan...</option>
                                     <?php
-                                    $query = "SELECT DISTINCT(namakecamatan) FROM namakecamatan ORDER BY namakecamatan ASC";
+                                    $query = "SELECT DISTINCT(nama_kecamatan) FROM `tbl_data_pertanian` ORDER BY nama_kecamatan ASC";
                                     $result = mysqli_query($koneksi, $query);                                
                                         while(list($category) = mysqli_fetch_row($result)){
                                         $option = '<option value="'.$category.'">'.$category.'</option>';
@@ -203,10 +223,10 @@
                             <div class="form-group row">
                               <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Kecamatan 2</label>
                               <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
+                              <select name="namakecamatan1" class="custom-select text-uppercase" required="">
                                     <option disabled selected>Pilih Kecamatan...</option>
                                     <?php
-                                    $query = "SELECT DISTINCT(namakecamatan) FROM namakecamatan ORDER BY namakecamatan ASC";
+                                    $query = "SELECT DISTINCT(nama_kecamatan) FROM `tbl_data_pertanian` ORDER BY nama_kecamatan ASC";
                                     $result = mysqli_query($koneksi, $query);                                
                                         while(list($category) = mysqli_fetch_row($result)){
                                         $option = '<option value="'.$category.'">'.$category.'</option>';
@@ -219,10 +239,10 @@
                             <div class="form-group row">
                               <label for="lname" class="col-sm-4 col-form-label text-dark">Pilih Kecamatan 3</label>
                               <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
+                              <select name="namakecamatan2" class="custom-select text-uppercase" required="">
                                     <option disabled selected>Pilih Kecamatan...</option>
                                     <?php
-                                    $query = "SELECT DISTINCT(namakecamatan) FROM namakecamatan ORDER BY namakecamatan ASC";
+                                    $query = "SELECT DISTINCT(nama_kecamatan) FROM `tbl_data_pertanian` ORDER BY nama_kecamatan ASC";
                                     $result = mysqli_query($koneksi, $query);                                
                                         while(list($category) = mysqli_fetch_row($result)){
                                         $option = '<option value="'.$category.'">'.$category.'</option>';
@@ -235,94 +255,43 @@
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Tahun</label>
                                 <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
-                                    <option disabled selected>Pilih Tahun ...</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
+                                <select name="tahun1" class="custom-select text-uppercase" required="">
+                                <option disabled selected>Pilih Tahun...</option>
+                                <?php
+                                $query = "SELECT DISTINCT(tahun) FROM `tbl_data_pertanian`";
+                                $result = mysqli_query($koneksi, $query);                                
+                                    while(list($category) = mysqli_fetch_row($result)){
+                                    $option = '<option value="'.$category.'">'.$category.'</option>';
+                                    echo ($option);
+                                    }
+                                ?>
                                 </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lname" class="col-sm-4 col-form-label text-dark">Tahun</label>
                                 <div class="col-sm-8">
-                                <select name="namadesa" class="custom-select" required="">
-                                    <option disabled selected>s/d Tahun....</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
+                                <select name="tahun2" class="custom-select text-uppercase" required="">
+                                <option disabled selected>s/d Tahun...</option>
+                                <?php
+                                $query = "SELECT DISTINCT(tahun) FROM `tbl_data_pertanian`";
+                                $result = mysqli_query($koneksi, $query);                                
+                                    while(list($category) = mysqli_fetch_row($result)){
+                                    $option = '<option value="'.$category.'">'.$category.'</option>';
+                                    echo ($option);
+                                    }
+                                ?>
                                 </select>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-6">
                             <div class="form-group-row">
-                                <button type="submit" class="btn btn-warning mb-4"><i class="fas fa-search"></i> Cari</button>
-                                <button type="submit" class="btn btn-warning mb-4"><i class="far fa-file-excel"></i> Excel</button>
+                                <button type="submit" class="btn btn-danger mb-4 py-3 px-3"><i class="fas fa-search"></i> Cari</button>
+                                <button type="submit" class="btn btn-danger mb-4 py-3 px-3"><i class="far fa-file-excel"></i> Excel</button>
                             </div>
                         </div>
-                    <hr class="style2">
-                    </section>
-                    <table class="table table-hover table-striped table-bordered datatab" style="width: 100%;">
-                      <thead>
-                          <tr>
-                              <th scope="col" class="text-center bg-success">No ID</th>
-                              <th scope="col" class="text-center bg-success">Nama Komoditas</th>
-                              <th scope="col" class="text-center bg-success">Sektor</th>
-                              <th scope="col" class="text-center bg-success">Sub-Sektor</th>
-                              <th scope="col" class="text-center bg-success">Satuan</th>
-                              <th scope="col" class="text-center bg-success">Edit</th>
-                          </tr>
-                      </thead>  
-                      <tbody>
-                        <?php 
-                            $batas = 10;
-                            $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-                            $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-            
-                            $previous = $halaman - 1;
-                            $next = $halaman + 1;
-                            
-                            $data = mysqli_query($koneksi,"select * from tbl_master_komoditas");
-                            $jumlah_data = mysqli_num_rows($data);
-                            $total_halaman = ceil($jumlah_data / $batas);
-            
-                            $data_pegawai = mysqli_query($koneksi,"select * from tbl_master_komoditas limit $halaman_awal, $batas");
-                            $nomor = $halaman_awal+1;
-                            while($d = mysqli_fetch_array($data_pegawai)){
-                        ?>
-                        <tr>
-                            <td class="text-center"><?php echo $d['id']; ?></td>
-                            <td class="text-center text-uppercase"><?php echo $d['nama_komoditas']; ?></td>
-                            <td class="text-center text-uppercase"><?php echo $d['sektor']; ?></td>
-                            <td class="text-center text-uppercase"><?php echo $d['sub_sektor']; ?></td>
-                            <td class="text-center text-uppercase"><?php echo $d['satuan']; ?></td>
-                            <td><a href="edit_master_komoditas.php?id=<?php echo $d['id'];?>"><i class="fas fa-edit fa-2x"></i></a></td>
-                        </tr>
-                          <?php               
-                          } 
-                          ?>
-                      </tbody>
-                    </table>
-                    <nav>
-                      <ul class="pagination justify-content-center">
-                          <li class="page-item">
-                              <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Sebelumnya</a>
-                          </li>
-                          <?php 
-                          for($x=1;$x<=$total_halaman;$x++){
-                              ?> 
-                              <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                              <?php
-                          }
-                          ?>				
-                          <li class="page-item">
-                              <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Sesudahnya</a>
-                          </li>
-                      </ul>
-                  </nav>
+                    </section>                    
                 </form>
             </div>
         </div>

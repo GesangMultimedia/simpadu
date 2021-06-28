@@ -36,7 +36,7 @@
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-pic">
-                        <img class="img-responsive rounded-circle" src="img/user.jpg" alt="User picture">
+                        <img class="img-responsive rounded-circle" src="img/user.jpg" style="height:auto" alt="User picture">
                     </div>
                     <div class="user-info">
                         <span class="user-name"><?php echo $_SESSION["user"]["name"] ?>
@@ -129,16 +129,16 @@
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <a href="#"><i class="fas fa-chart-pie"></i> Pie chart</a>
+                                    <a href="#"><i class="fas fa-chart-pie"></i> Data Pertanian</a>
                                 </ul>
                                 <ul>
-                                    <a href="#"><i class="fas fa-chart-line"></i> Line chart</a>
+                                    <a href="#"><i class="fas fa-chart-line"></i> Data Perikanan</a>
                                 </ul>
                                 <ul>
-                                    <a href="#"><i class="fas fa-chart-bar"></i> Bar chart</a>
+                                    <a href="#"><i class="fas fa-chart-bar"></i> Data Luas</a>
                                 </ul>
                                 <ul>
-                                    <a href="#"><i class="fas fa-chart-area"></i> Histogram</a>
+                                    <a href="#"><i class="fas fa-chart-area"></i> Data Per Kategori</a>
                                 </ul>
                             </div>
                         </li>
